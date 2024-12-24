@@ -142,3 +142,9 @@ Se la navbar è più alta di 78px, adatta di conseguenza. */
         display: none !important;
     }
 }
+
+.brand-mobile {
+    font-size: 18pt;
+    padding: 0 !important;
+    letter-spacing: 1px;
+}
