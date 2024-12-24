@@ -1,189 +1,203 @@
 body {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 main {
-    flex: 1;
-    margin-top: 78px; /* spazio sotto la navbar fissa */
-    transition: opacity 0.5s ease; 
+  flex: 1;
+  margin-top: 78px; /* spazio sotto la navbar fissa */
+  transition: opacity 0.5s ease;
 }
 
 .hidden {
-    opacity: 0;
-    pointer-events: none;
+  opacity: 0;
+  pointer-events: none;
 }
 footer {
-    background-color: #0c3c60;
-    font-weight: 100;
+  background-color: #0c3c60;
+  font-weight: 100;
 }
 
 #mobileBrand {
-    transition: opacity 0.3s ease;
+  transition: opacity 0.3s ease;
 }
 
 #mobileBrand.brand-hidden {
-    opacity: 0;
+  opacity: 0;
 }
 
 .navbar {
-    background-color: #0c3c60;
-    color: #ffffff;
-    font-weight: 500;
+  background-color: #0c3c60;
+  color: #ffffff;
+  font-weight: 500;
 }
 
 .navbar .nav-link {
-    color: #ffffff;
-    transition: color 0.3s ease;
-    margin: 0 10px;
-    white-space: nowrap;
+  color: #ffffff;
+  transition: color 0.3s ease;
+  margin: 0 10px;
+  white-space: nowrap;
 }
 .navbar .nav-link:hover {
-    color: #7dcada;
+  color: #7dcada;
 }
 
 .bassanese {
-    color: #7dcada;
+  color: #7dcada;
 }
 
 .navbar-toggler:focus,
 .navbar-toggler:focus-visible {
-    outline: none;
-    box-shadow: none;
+  outline: none;
+  box-shadow: none;
 }
-.navbar-toggler{
-    border: none;
+.navbar-toggler {
+  border: none;
 }
 
 /* Icona hamburger animata */
 .animated-icon1 {
-    width: 30px;
-    height: 24px;
-    position: relative;
-    transition: 0.5s ease-in-out;
-    cursor: pointer;
+  width: 30px;
+  height: 24px;
+  position: relative;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
 }
 
 .animated-icon1 span {
-    display: block;
-    position: absolute;
-    height: 3px;
-    width: 100%;
-    border-radius: 9px;
-    background: #ffffff;
-    transition: 0.25s ease-in-out;
+  display: block;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  border-radius: 9px;
+  background: #ffffff;
+  transition: 0.25s ease-in-out;
 }
 
-.animated-icon1 span:nth-child(1) { top: 0; }
-.animated-icon1 span:nth-child(2) { top: 10px; }
-.animated-icon1 span:nth-child(3) { top: 20px; }
+.animated-icon1 span:nth-child(1) {
+  top: 0;
+}
+.animated-icon1 span:nth-child(2) {
+  top: 10px;
+}
+.animated-icon1 span:nth-child(3) {
+  top: 20px;
+}
 
 .animated-icon1.open span:nth-child(1) {
-    top: 11px;
-    transform: rotate(135deg);
+  top: 11px;
+  transform: rotate(135deg);
 }
 .animated-icon1.open span:nth-child(2) {
-    opacity: 0;
-    transform: translateX(-60px);
+  opacity: 0;
+  transform: translateX(-60px);
 }
 .animated-icon1.open span:nth-child(3) {
-    top: 11px;
-    transform: rotate(-135deg);
+  top: 11px;
+  transform: rotate(-135deg);
 }
 
 /* Lasciamo che Bootstrap gestisca l'altezza del collapse.
 Rendi il contenuto interno abbastanza alto da riempire lo schermo. */
 #navbarMobileMenu {
-    overflow: hidden; /* Necessario per l'animazione di altezza */
-    width: 100%;
+  overflow: hidden; /* Necessario per l'animazione di altezza */
+  width: 100%;
 }
 
 #navbarMobileMenu .links-container {
-/* Assicura che il contenuto riempia la schermata sotto la navbar
+  /* Assicura che il contenuto riempia la schermata sotto la navbar
 Calcola: altezza viewport (100vh) - altezza navbar (78px)
 Se la navbar è più alta di 78px, adatta di conseguenza. */
-    min-height: calc(100vh - 78px);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  min-height: calc(100vh - 78px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #navbarMobileMenu a {
-    display: block;
-    margin: 20px 0;
-    font-size: 1.25rem;
-    text-decoration: none;
-    color: #ffffff;
+  display: block;
+  margin: 20px 0;
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: #ffffff;
 }
 
 #navbarMobileMenu a:hover {
-    color: #7dcada;
+  color: #7dcada;
 }
 
 /* Link desktop */
-.navbar-desktop { /* visibile solo >= lg */
-    display: none;
+.navbar-desktop {
+  /* visibile solo >= lg */
+  display: none;
 }
 
 @media (min-width: 992px) {
-    .navbar-desktop {
-        display: flex !important;
-    }
+  .navbar-desktop {
+    display: flex !important;
+  }
 }
 
-.navbar-mobile { /* visibile solo < lg */
-    display: flex;
+.navbar-mobile {
+  /* visibile solo < lg */
+  display: flex;
 }
 @media (min-width: 992px) {
-    .navbar-mobile {
-        display: none !important;
-    }
+  .navbar-mobile {
+    display: none !important;
+  }
 }
 
 .brand-mobile {
-    font-size: 18pt;
-    padding: 0 !important;
-    letter-spacing: 1px;
+  font-size: 18pt;
+  padding: 0 !important;
+  letter-spacing: 1px;
 }
 
 .services-highlight {
-    background-color: #0c3c60; /* Sfondo blu */
-    color: white; /* Colore del testo bianco */
-    letter-spacing: 1px;
+  background-color: #0c3c60; /* Sfondo blu */
+  color: white; /* Colore del testo bianco */
+  letter-spacing: 1px;
 }
 
 .services-firstline {
-    font-size: 18px; /* Dimensione font per la prima riga */
+  font-size: 18px; /* Dimensione font per la prima riga */
 }
 
 .services-secondline {
-    font-size: 30px; /* Dimensione font per la seconda riga */
+  font-size: 30px; /* Dimensione font per la seconda riga */
 }
 
 @media (min-width: 768px) {
-    .services-secondline {
-        font-size: 55px; /* Dimensione font per la seconda riga */
-    }
+  .services-secondline {
+    font-size: 55px; /* Dimensione font per la seconda riga */
+  }
 }
 
-.about-us{
-    background-color: rgb(209, 224, 235);
-    color:#0c3c60;
+.about-us {
+  background-color: rgb(209, 224, 235);
+  color: #0c3c60;
 }
 
 .about-us-title {
-    font-size: 30px; /* Font-size predefinito per mobile */
+  font-size: 30px; /* Font-size predefinito per mobile */
 }
 
 @media (min-width: 768px) {
-    .about-us-title {
-        font-size: 60px; /* Font-size per desktop */
-    }
+  .about-us-title {
+    font-size: 60px; /* Font-size per desktop */
+  }
 }
 
-.about-us-content{
-    font-size: 18px;
+.about-us-content {
+  font-size: 18px;
+}
+
+.btn-dipiu {
+  background-color: #0c3c60;
+  width: 140px;
+  border-radius: 0;
 }
