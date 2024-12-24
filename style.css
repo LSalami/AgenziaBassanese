@@ -160,7 +160,13 @@ Se la navbar è più alta di 78px, adatta di conseguenza. */
 }
 
 .services-secondline {
-    font-size: 55px; /* Dimensione font per la seconda riga */
+    font-size: 30px; /* Dimensione font per la seconda riga */
+}
+
+@media (min-width: 768px) {
+    .services-secondline {
+        font-size: 55px; /* Dimensione font per la seconda riga */
+    }
 }
 
 .about-us{
