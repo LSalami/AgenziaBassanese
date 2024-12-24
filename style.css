@@ -148,3 +148,18 @@ Se la navbar è più alta di 78px, adatta di conseguenza. */
     padding: 0 !important;
     letter-spacing: 1px;
 }
+
+.services-highlight {
+    background-color: #0c3c60; /* Sfondo blu */
+    color: white; /* Colore del testo bianco */
+}
+
+.services-firstline {
+    font-size: 18px; /* Dimensione font per la prima riga */
+    margin-bottom: 10px; /* Spazio sotto la prima riga */
+}
+
+.services-secondline {
+    font-size: 55px; /* Dimensione font per la seconda riga */
+    margin-top: 10px; /* Spazio sopra la seconda riga */
+}
