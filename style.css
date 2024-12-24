@@ -165,4 +165,13 @@ Se la navbar è più alta di 78px, adatta di conseguenza. */
 
 .about-us{
     background-color: rgb(209, 224, 235);
+    color:#0c3c60;
+}
+
+.about-us-title{
+    font-size: 60px;
+}
+
+.about-us-content{
+    font-size: 18px;
 }
