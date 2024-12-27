@@ -64,6 +64,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const targetMain = document.getElementById(targetId);
       if (targetMain) {
         targetMain.style.display = "block"; // Mostra la sezione desiderata
+
+        // Scorri in cima alla pagina
+        window.scrollTo({ top: 0, behavior: "smooth" });
       }
 
       // Chiudi il menu mobile se è aperto
