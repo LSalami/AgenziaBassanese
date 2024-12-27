@@ -28,44 +28,45 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault();
       const targetId = this.getAttribute("data-target");
 
-      // Se il target è "contact-us", torna alla home e scorri ai contatti
       if (targetId === "contact-us") {
-        // Mostra la home
+        // Torna alla home e scorri alla sezione "contact-us"
         allMains.forEach((main) => {
-          main.style.display = "none";
+          main.style.display = "none"; // Nascondi tutte le sezioni
         });
+
         const homeMain = document.getElementById("main-home");
         if (homeMain) {
-          homeMain.style.display = "block";
+          homeMain.style.display = "block"; // Mostra la home
         }
 
-        // Scorri alla sezione "contact-us"
         const contactSection = document.getElementById("contact-us");
         if (contactSection) {
+          // Scorri alla sezione "contact-us"
           contactSection.scrollIntoView({ behavior: "smooth" });
         }
 
-        // Chiudi il menu mobile se visibile
+        // Chiudi il menu mobile se è aperto
         if (collapseElement && collapseElement.classList.contains("show")) {
           const collapseInstance = new bootstrap.Collapse(collapseElement, {
             toggle: false,
           });
           collapseInstance.hide();
         }
+
         return;
       }
 
-      // Per altri target, mostra solo la sezione desiderata
+      // Per gli altri target
       allMains.forEach((main) => {
-        main.style.display = "none";
+        main.style.display = "none"; // Nascondi tutte le sezioni
       });
 
       const targetMain = document.getElementById(targetId);
       if (targetMain) {
-        targetMain.style.display = "block";
+        targetMain.style.display = "block"; // Mostra la sezione desiderata
       }
 
-      // Chiudi il menu mobile se visibile
+      // Chiudi il menu mobile se è aperto
       if (collapseElement && collapseElement.classList.contains("show")) {
         const collapseInstance = new bootstrap.Collapse(collapseElement, {
           toggle: false,
