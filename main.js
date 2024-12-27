@@ -28,6 +28,10 @@ document.addEventListener("DOMContentLoaded", function () {
       e.preventDefault();
       const targetId = this.getAttribute("data-target");
 
+      // Aggiorna la classe "active" sui link
+      links.forEach((l) => l.classList.remove("active"));
+      this.classList.add("active");
+
       if (targetId === "contact-us") {
         // Torna alla home e scorri alla sezione "contact-us"
         allMains.forEach((main) => {

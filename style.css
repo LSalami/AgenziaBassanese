@@ -43,10 +43,15 @@ footer {
     transition: color 0.3s ease;
     margin: 0 10px;
     white-space: nowrap;
+    font-size: 18px
 }
 
 .navbar .nav-link:hover {
     color: #7dcada;
+}
+
+nav a.active {
+    color: rgb(209, 224, 235)/* Colore del testo del link attivo */
 }
 
 .bassanese {
@@ -304,7 +309,8 @@ dt {
 }
 
 .privacy-content {
-    color: rgb(53, 121, 170);;
+    color: rgb(53, 121, 170);
+    ;
     padding-top: 20px;
 }
 
@@ -316,26 +322,35 @@ dt {
 .pagina {
     color: rgb(53, 121, 170);
 }
-.pagina h1, .pagina h2{
+
+.pagina h1,
+.pagina h2 {
     text-align: center;
     margin: 20px;
 }
 
 .pagina h1 {
-    position: relative; /* Permette di posizionare la riga */
-    margin-bottom: 30px; /* Spazio extra sotto il titolo */
+    position: relative;
+    /* Permette di posizionare la riga */
+    margin-bottom: 30px;
+    /* Spazio extra sotto il titolo */
     font-size: 50pt;
 }
 
 .pagina h1::after {
-    content: ""; /* Pseudo-elemento per la riga */
+    content: "";
+    /* Pseudo-elemento per la riga */
     display: block;
-    width: 50pt; /* Larghezza della riga */
-    height: 3pt; /* Altezza della riga */
-    background-color: rgb(53, 121, 170); /* Colore della riga */
-    margin: 10px auto 0; /* Centra la riga sotto il titolo */
+    width: 50pt;
+    /* Larghezza della riga */
+    height: 3pt;
+    /* Altezza della riga */
+    background-color: rgb(53, 121, 170);
+    /* Colore della riga */
+    margin: 10px auto 0;
+    /* Centra la riga sotto il titolo */
 }
 
-.pagina p{
+.pagina p {
     font-size: 18px;
 }
