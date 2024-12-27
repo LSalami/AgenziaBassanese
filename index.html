@@ -1,212 +1,194 @@
 <!DOCTYPE html>
 <html lang="it">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Agenzia Bassanese SAS</title>
 
-    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agenzia Bassanese SAS</title>
 
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous" />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  </head>
-  <body>
-    <header>
-      <nav class="navbar navbar-dark fixed-top">
-        <div class="container-fluid">
-          <!-- Navbar Desktop (>=992px) -->
-          <div class="navbar-desktop w-100 align-items-center">
-            <div class="col-lg-2"></div>
-            <div class="col-lg-2 text-start">
-              <!--<a class="navbar-brand d-flex flex-column" href="/" >-->
-              <a
-                class="navbar-brand d-flex flex-column"
-                href="/AgenziaBassanese">
-                <span class="agenzia">AGENZIA</span>
-                <span class="bassanese">BASSANESE SAS</span>
-              </a>
-            </div>
-            <div class="col-lg-2"></div>
-            <div class="col-lg-4 text-end">
-              <ul class="navbar-nav d-flex flex-row justify-content-end">
-                <li class="nav-item">
-                  <a class="nav-link" href="#" data-target="main-info"
-                    >SU DI NOI</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#" data-target="main-servizi"
-                    >SERVIZI</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#contact-us">CONTATTI</a>
-                </li>
-              </ul>
-            </div>
-            <div class="col-lg-2"></div>
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-dark fixed-top">
+      <div class="container-fluid">
+        <!-- Navbar Desktop (>=992px) -->
+        <div class="navbar-desktop w-100 align-items-center">
+          <div class="col-lg-2"></div>
+          <div class="col-lg-2 text-start">
+            <!--<a class="navbar-brand d-flex flex-column" href="/" >-->
+            <a class="navbar-brand d-flex flex-column" href="/AgenziaBassanese">
+              <span class="agenzia">AGENZIA</span>
+              <span class="bassanese">BASSANESE SAS</span>
+            </a>
           </div>
-
-          <!-- Navbar Mobile (<992px) -->
-          <div
-            class="navbar-mobile justify-content-between align-items-center w-100">
-            <div class="navbar-brand-wrapper">
-              <!--<a class="navbar-brand d-flex flex-column" href="/" id="mobileBrand">-->
-              <a
-                class="navbar-brand d-flex flex-column brand-mobile"
-                href="/AgenziaBassanese"
-                id="mobileBrand">
-                <span class="agenzia mb-sm-0">AGENZIA</span>
-                <span class="bassanese">BASSANESE SAS</span>
-              </a>
-            </div>
-            <button
-              class="navbar-toggler"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#navbarMobileMenu"
-              aria-controls="navbarMobileMenu"
-              aria-expanded="false"
-              aria-label="Toggle navigation">
-              <div class="animated-icon1">
-                <span></span><span></span><span></span>
-              </div>
-            </button>
+          <div class="col-lg-2"></div>
+          <div class="col-lg-4 text-end">
+            <ul class="navbar-nav d-flex flex-row justify-content-end">
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-target="main-info">SU DI NOI</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#" data-target="main-servizi">SERVIZI</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#contact-us">CONTATTI</a>
+              </li>
+            </ul>
           </div>
+          <div class="col-lg-2"></div>
+        </div>
 
-          <!-- Menu collassabile solo per mobile -->
-          <div class="collapse d-lg-none" id="navbarMobileMenu">
-            <div class="links-container py-3">
-              <a href="#" data-target="main-info">SU DI NOI</a>
-              <a href="#" data-target="main-servizi">SERVIZI</a>
-              <a href="#contact-us">CONTATTI</a>
+        <!-- Navbar Mobile (<992px) -->
+        <div class="navbar-mobile justify-content-between align-items-center w-100">
+          <div class="navbar-brand-wrapper">
+            <!--<a class="navbar-brand d-flex flex-column" href="/" id="mobileBrand">-->
+            <a class="navbar-brand d-flex flex-column brand-mobile" href="/AgenziaBassanese" id="mobileBrand">
+              <span class="agenzia mb-sm-0">AGENZIA</span>
+              <span class="bassanese">BASSANESE SAS</span>
+            </a>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMobileMenu"
+            aria-controls="navbarMobileMenu" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="animated-icon1">
+              <span></span><span></span><span></span>
             </div>
+          </button>
+        </div>
+
+        <!-- Menu collassabile solo per mobile -->
+        <div class="collapse d-lg-none" id="navbarMobileMenu">
+          <div class="links-container py-3">
+            <a href="#" data-target="main-info">SU DI NOI</a>
+            <a href="#" data-target="main-servizi">SERVIZI</a>
+            <a href="#contact-us">CONTATTI</a>
           </div>
         </div>
-      </nav>
-    </header>
-
-    <!-- Main Content -->
-    <main id="main-home">
-      <!-- Image Section -->
-      <div class="image-container">
-        <img
-          src="media/agenziabassanese.jpeg"
-          alt="Immagine della sede di Agenzia Bassanese SAS"
-          class="img-fluid w-100" />
       </div>
+    </nav>
+  </header>
 
-      <!-- Services Section -->
-      <section class="services-highlight py-3 text-center">
-        <div class="container">
-          <h1 class="services-firstline">
-            PER LE TUE PRATICHE AFFIDATI ALLA NOSTRA AGENZIA
-          </h1>
-          <h2 class="services-secondline mt-3">
-            UN CONSULENTE AL TUO SERVIZIO
-          </h2>
-        </div>
-      </section>
+  <!-- Main Content -->
+  <main id="main-home">
+    <!-- Image Section -->
+    <div class="image-container">
+      <img src="media/agenziabassanese.jpeg" alt="Immagine della sede di Agenzia Bassanese SAS"
+        class="img-fluid w-100" />
+    </div>
 
-      <!-- About Us Section -->
-      <section class="about-us py-5 text-center">
-        <div class="container px-lg-5">
-          <h2 class="about-us-title mb-4">SU DI NOI</h2>
-          <div class="row about-us-content">
-            <div class="col-sm-0 col-lg-2"></div>
-            <div class="col-sm-12 col-lg-8">
-              <p>
-                Agenzia Bassanese opera da oltre 35 anni nel complesso mondo
-                delle pratiche auto e da sempre mette a frutto le proprie
-                esperienze nella ricerca di nuovi servizi più completi, oltre a
-                tradurre i propri sforzi in un'ottima organizzazione interna,
-                fidando di personale specializzato.
-              </p>
-              <p>
-                Lo scopo che ci prefissiamo è quello di creare un contatto
-                diretto con tutti i nostri Clienti al fine di offrire un
-                SERVIZIO completo di consulenza e assistenza per poter risolvere
-                ogni tipo di problema legato al settore automobilistico.
-              </p>
-              <div class="text-center">
-                <button
-                  class="btn btn-primary btn-dipiu"
-                  data-target="main-info">
-                  DI PIU'
-                </button>
-              </div>
-            </div>
-            <div class="col-sm-0 col-lg-2"></div>
-          </div>
-        </div>
-      </section>
-      <!-- Contact Us Section-->
-      <section id="contact-us" class="py-5 text-center">
-        <div class="container px-lg-5">
-          <h2 class="contact-us-title mb-4">CONTATTI</h2>
-          <div class="contact-info text-start mx-auto">
-            <div class="d-flex justify-content-evenly">
-              <div>
-                <p class="azzurrino">AGENZIA BASSANESE</p>
-                <p>Viale San Giuseppe 112<br>Cassola, VI 36022</p>
-                <div class="d-flex align-items-center azzurrino"> <i class="fa fa-envelope me-2 fs-5"></i><a href="mailto:info@agenziabassanese.com">info@agenziabassanese.com</a></div>
-                <p>
-                  <dl> 
-                    <dt>Tel:</dt>
-                    <dd class="azzurrino">
-                      <dl class="ms-2">
-                        <dd class="azzurrino">
-                          <div class="d-flex align-items-center"> <i class="fa fa-phone me-2 fs-6"></i><a href="tel:+39042438000">0424 - 38000</a></div>                         
-                          <div class="d-flex align-items-center">  <i class="fa fa-phone me-2 fs-6"></i><a href="tel:+390424511260">0424 - 511260</a></div>                           
-                        </dd>                      
-                      </dl>              
-                   </dd>                    
-                 </dl>                
-                </p>
-              </div>
-              <div>
-                <p><span class="azzurrino">Lun - Ven:</span><br><i class="fa fa-clock me-1"></i>
-                  8:30 - 12:30 | 15:00 - 19:00</p>
-                <p><span class="azzurrino">Sabato (solo su appuntamento):</span><br><i class="fa fa-clock me-1"></i>
-                  10:00 - 12:00</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <main id="main-info" style="display: none; padding: 20px">
+    <!-- Services Section -->
+    <section class="services-highlight py-3 text-center">
       <div class="container">
-        <h1>Su di noi</h1>
-        <p>Questa è la sezione per parlare di noi.</p>
+        <h1 class="services-firstline">
+          PER LE TUE PRATICHE AFFIDATI ALLA NOSTRA AGENZIA
+        </h1>
+        <h2 class="services-secondline mt-3">
+          UN CONSULENTE AL TUO SERVIZIO
+        </h2>
       </div>
-    </main>
+    </section>
 
-    <main id="main-servizi" style="display: none; padding: 20px">
-      <h1>Servizi</h1>
-      <p>Questa è la sezione dedicata ai servizi offerti.</p>
-    </main>
-    <footer class="text-white text-center py-3">
-      <p>&copy; 2024 Agenzia Bassanese SAS</p>
-      <p>
-        <a href="privacy.html" class="text-white text-decoration-none"
-          >Privacy Policy</a
-        >
-      </p>
-    </footer>
+    <!-- About Us Section -->
+    <section class="about-us py-5 text-center">
+      <div class="container px-lg-5">
+        <h2 class="about-us-title mb-4">SU DI NOI</h2>
+        <div class="row about-us-content">
+          <div class="col-sm-0 col-lg-2"></div>
+          <div class="col-sm-12 col-lg-8">
+            <p>
+              Agenzia Bassanese opera da oltre 35 anni nel complesso mondo
+              delle pratiche auto e da sempre mette a frutto le proprie
+              esperienze nella ricerca di nuovi servizi più completi, oltre a
+              tradurre i propri sforzi in un'ottima organizzazione interna,
+              fidando di personale specializzato.
+            </p>
+            <p>
+              Lo scopo che ci prefissiamo è quello di creare un contatto
+              diretto con tutti i nostri Clienti al fine di offrire un
+              SERVIZIO completo di consulenza e assistenza per poter risolvere
+              ogni tipo di problema legato al settore automobilistico.
+            </p>
+            <div class="text-center">
+              <button class="btn btn-primary btn-dipiu" data-target="main-info">
+                DI PIU'
+              </button>
+            </div>
+          </div>
+          <div class="col-sm-0 col-lg-2"></div>
+        </div>
+      </div>
+    </section>
+    <!-- Contact Us Section-->
+    <section id="contact-us" class="py-5 text-center">
+      <div class="container px-lg-5">
+        <h2 class="contact-us-title mb-4">CONTATTI</h2>
+        <div class="contact-info text-start mx-auto">
+          <div class="d-flex justify-content-evenly">
+            <div>
+              <p class="azzurrino">AGENZIA BASSANESE</p>
+              <p>Viale San Giuseppe 112<br>Cassola, VI 36022</p>
+              <div class="d-flex align-items-center azzurrino"> <i class="fa fa-envelope me-2 fs-5"></i><a
+                  href="mailto:info@agenziabassanese.com">info@agenziabassanese.com</a></div>
+              <p>
+              <dl>
+                <dt>Tel:</dt>
+                <dd class="azzurrino">
+                  <dl class="ms-2">
+                    <dd class="azzurrino">
+                      <div class="d-flex align-items-center"> <i class="fa fa-phone me-2 fs-6"></i><a
+                          href="tel:+39042438000">0424 - 38000</a></div>
+                      <div class="d-flex align-items-center"> <i class="fa fa-phone me-2 fs-6"></i><a
+                          href="tel:+390424511260">0424 - 511260</a></div>
+                    </dd>
+                  </dl>
+                </dd>
+              </dl>
+              </p>
+            </div>
+            <div>
+              <p><span class="azzurrino">Lun - Ven:</span><br><i class="fa fa-clock me-1"></i>
+                8:30 - 12:30 | 15:00 - 19:00</p>
+              <p><span class="azzurrino">Sabato (solo su appuntamento):</span><br><i class="fa fa-clock me-1"></i>
+                10:00 - 12:00</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <!-- Bootstrap JS -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"></script>
-    <script src="main.js"></script>
-  </body>
+  <main id="main-info" style="display: none; padding: 20px">
+    <div class="container">
+      <h1>Su di noi</h1>
+      <p>Questa è la sezione per parlare di noi.</p>
+    </div>
+  </main>
+
+  <main id="main-servizi" style="display: none; padding: 20px">
+    <h1>Servizi</h1>
+    <p>Questa è la sezione dedicata ai servizi offerti.</p>
+  </main>
+  <footer class="text-white text-center py-3">
+    <p>&copy; 2024 Agenzia Bassanese SAS</p>
+    <p>
+      <a href="privacy.html" class="text-white text-decoration-none">Privacy Policy</a>
+    </p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+</body>
+
 </html>
