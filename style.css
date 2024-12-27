@@ -269,26 +269,26 @@ dt {
 }
 
 .contact-info .d-flex {
-    flex-wrap: wrap; /* Permette agli elementi di andare a capo */
+    flex-wrap: wrap;
+    /* Permette agli elementi di andare a capo */
 }
 
 @media (max-width: 768px) {
     .contact-info .d-flex {
-        flex-direction: column; /* Imposta le colonne una sotto l'altra su dispositivi mobili */
-        align-items: flex-start; /* Allinea gli elementi a sinistra */
+        flex-direction: column;
+        /* Imposta le colonne una sotto l'altra su dispositivi mobili */
+        align-items: flex-start;
+        /* Allinea gli elementi a sinistra */
     }
 }
 
-.map-container{
+.map-container iframe {
     display: block;
 }
 
-.map-button{
+#contact-us .btn {
     background-color: rgb(209, 224, 235);
-}
-
-.map-button .btn{
-    background-color: #0c3c60;
+    color: #0c3c60;
     width: 140px;
     border-radius: 0;
 }
