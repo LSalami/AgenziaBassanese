@@ -265,3 +265,14 @@ dl {
 dt {
     font-weight: 500;
 }
+
+.contact-info .d-flex {
+    flex-wrap: wrap; /* Permette agli elementi di andare a capo */
+}
+
+@media (max-width: 768px) {
+    .contact-info .d-flex {
+        flex-direction: column; /* Imposta le colonne una sotto l'altra su dispositivi mobili */
+        align-items: flex-start; /* Allinea gli elementi a sinistra */
+    }
+}
