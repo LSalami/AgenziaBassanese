@@ -50,8 +50,12 @@ footer {
     color: #7dcada;
 }
 
-nav a.active {
-    color: rgb(209, 224, 235)/* Colore del testo del link attivo */
+.navbar .nav-link.active {
+    color: rgb(209, 224, 235);
+}
+
+.navbar .nav-link.active:hover {
+    color:  #7dcada;
 }
 
 .bassanese {
