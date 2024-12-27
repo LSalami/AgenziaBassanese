@@ -239,3 +239,7 @@ dl{
     display: grid;
     grid-template-columns: max-content auto;
 }
+
+dt{
+    font-weight: 500;
+}
