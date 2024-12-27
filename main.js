@@ -90,6 +90,6 @@ document.getElementById('get-directions').addEventListener('click', function () 
     window.location.href = `geo:${latitude},${longitude}?q=${address}`;
   } else {
     // Fallback per browser desktop o non riconosciuti
-    window.location.href = `https://www.google.com/maps?q=${latitude},${longitude}(${address})`;
+    window.open(`https://www.google.com/maps?q=${latitude},${longitude}(${address})`, '_blank');
   }
 });
