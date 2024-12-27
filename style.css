@@ -279,6 +279,10 @@ dt {
     }
 }
 
+.map-container{
+    display: block;
+}
+
 .map-button{
     background-color: rgb(209, 224, 235);
 }

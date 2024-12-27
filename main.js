@@ -78,9 +78,9 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 document.getElementById('get-directions').addEventListener('click', function () {
-  const latitude = 45.775752;
-  const longitude = 11.755000;
-  const address = encodeURIComponent("Viale San Giuseppe 112, Cassola, VI 36022");
+  const latitude = 45.768572151575086;
+  const longitude = 11.759129441706733;
+  const address = encodeURIComponent("Agenzia Bassanese, Viale San Giuseppe 112, 36022 Cassola VI, Italia");
 
   if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
     // iOS - Usa Apple Maps
