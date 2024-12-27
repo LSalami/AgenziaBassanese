@@ -261,6 +261,7 @@ Se la navbar è più alta di 78px, adatta di conseguenza. */
 dl {
     display: grid;
     grid-template-columns: max-content auto;
+    margin-bottom: -10px;
 }
 
 dt {
@@ -276,4 +277,14 @@ dt {
         flex-direction: column; /* Imposta le colonne una sotto l'altra su dispositivi mobili */
         align-items: flex-start; /* Allinea gli elementi a sinistra */
     }
+}
+
+.map-button{
+    background-color: rgb(209, 224, 235);
+}
+
+.map-button .btn{
+    background-color: #0c3c60;
+    width: 140px;
+    border-radius: 0;
 }

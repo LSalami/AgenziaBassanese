@@ -76,3 +76,20 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+document.getElementById('get-directions').addEventListener('click', function () {
+  const latitude = 45.775752;
+  const longitude = 11.755000;
+  const address = encodeURIComponent("Viale San Giuseppe 112, Cassola, VI 36022");
+
+  if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+    // iOS - Usa Apple Maps
+    window.location.href = `http://maps.apple.com/?ll=${latitude},${longitude}&q=${address}`;
+  } else if (navigator.userAgent.match(/Android/i)) {
+    // Android - Usa Google Maps
+    window.location.href = `geo:${latitude},${longitude}?q=${address}`;
+  } else {
+    // Fallback per browser desktop o non riconosciuti
+    window.location.href = `https://www.google.com/maps?q=${latitude},${longitude}(${address})`;
+  }
+});
