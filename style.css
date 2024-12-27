@@ -293,13 +293,9 @@ dt {
     font-size: 22px;
 }
 
-.privacy {
-    background-color: rgb(209, 224, 235);
-}
-
 .privacy-header {
     background-color: #0c3c60;
-    color: white;
+    color: rgb(125, 202, 218);
     padding: 20px 0;
 }
 
@@ -309,11 +305,15 @@ dt {
 }
 
 .privacy-content {
-    color: #0c3c60;
+    color: rgb(110, 164, 202);
     padding-top: 20px;
 }
 
 .privacy-section h2 {
     font-size: 1.5rem;
     margin-bottom: 10px;
+}
+
+.su-di-noi {
+    color: rgb(110, 164, 202)
 }
