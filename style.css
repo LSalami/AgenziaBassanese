@@ -325,13 +325,14 @@ dt {
 .su-di-noi h1 {
     position: relative; /* Permette di posizionare la riga */
     margin-bottom: 30px; /* Spazio extra sotto il titolo */
+    font-size: 50pt;
 }
 
 .su-di-noi h1::after {
     content: ""; /* Pseudo-elemento per la riga */
     display: block;
-    width: 50px; /* Larghezza della riga */
-    height: 2px; /* Altezza della riga */
-    background-color: rgb(110, 164, 202); /* Colore della riga */
+    width: 50pt; /* Larghezza della riga */
+    height: 3pt; /* Altezza della riga */
+    background-color: rgb(53, 121, 170); /* Colore della riga */
     margin: 10px auto 0; /* Centra la riga sotto il titolo */
 }
