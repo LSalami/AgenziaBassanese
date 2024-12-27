@@ -294,8 +294,7 @@ dt {
 }
 
 privacy {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
+    background-color: rgb(209, 224, 235);
 }
 
 .privacy-header {
@@ -310,13 +309,7 @@ privacy {
 }
 
 .privacy-content {
-    padding: 20px;
-    background-color: rgb(209, 224, 235);
     color: #0c3c60;
-}
-
-.privacy-section {
-    margin-bottom: 20px;
 }
 
 .privacy-section h2 {
