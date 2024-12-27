@@ -203,7 +203,7 @@ Se la navbar è più alta di 78px, adatta di conseguenza. */
 }
 
 #contact-us {
-    background-color: #f8f9fa;
+    background-color: #0c3c60;
     padding: 40px 20px;
     border-top: 1px solid #ddd;
 }
@@ -216,13 +216,23 @@ Se la navbar è più alta di 78px, adatta di conseguenza. */
     margin: 10px 0;
 }
 .contact-info a {
-    color: #007bff;
+    color: none;
     text-decoration: none;
 }
 .contact-info a:hover {
-    text-decoration: underline;
+    text-decoration: none;
 }
 
-.azzurino{
+.azzurrino{
   color:  rgb(30, 171, 199);
+}
+
+.contact-us-title {
+    font-size: 30px; /* Font-size predefinito per mobile */
+}
+
+@media (min-width: 768px) {
+    .contact-us-title {
+        font-size: 60px; /* Font-size per desktop */
+    }
 }
