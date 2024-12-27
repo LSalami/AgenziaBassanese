@@ -202,18 +202,27 @@ Se la navbar è più alta di 78px, adatta di conseguenza. */
   border-radius: 0;
 }
 
-  #contact-us {
+#contact-us {
     background-color: #f8f9fa;
     padding: 40px 20px;
     border-top: 1px solid #ddd;
-  }
-  .contact-info p {
+}
+
+.contact-info{
+    max-width: 600px;
+}
+
+.contact-info p {
     margin: 10px 0;
-  }
-  .contact-info a {
+}
+.contact-info a {
     color: #007bff;
     text-decoration: none;
-  }
-  .contact-info a:hover {
+}
+.contact-info a:hover {
     text-decoration: underline;
-  }
+}
+
+.azzurino{
+  color:  rgb(30, 171, 199);
+}
