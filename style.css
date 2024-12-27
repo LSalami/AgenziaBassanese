@@ -186,12 +186,12 @@ Se la navbar è più alta di 78px, adatta di conseguenza. */
 }
 
 .services-firstline {
-    font-size: 18px;
+    font-size: 18pt;
     /* Dimensione font per la prima riga */
 }
 
 .services-secondline {
-    font-size: 30px;
+    font-size: 30pt;
     /* Dimensione font per la seconda riga */
 }
 
@@ -208,7 +208,7 @@ Se la navbar è più alta di 78px, adatta di conseguenza. */
 }
 
 .about-us-title {
-    font-size: 30px;
+    font-size: 30pt;
     /* Font-size predefinito per mobile */
 }
 
@@ -256,7 +256,7 @@ Se la navbar è più alta di 78px, adatta di conseguenza. */
 }
 
 .contact-us-title {
-    font-size: 30px;
+    font-size: 30pt;
     /* Font-size predefinito per mobile */
 }
 

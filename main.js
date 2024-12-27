@@ -45,8 +45,14 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const contactSection = document.getElementById("contact-us");
         if (contactSection) {
-          // Scorri alla sezione "contact-us"
-          contactSection.scrollIntoView({ behavior: "smooth" });
+          // Scorri alla sezione "contact-us" con offset di 100px
+          const offset = -78; // Offset in pixel
+          const contactPosition =
+            contactSection.getBoundingClientRect().top +
+            window.scrollY +
+            offset;
+
+          window.scrollTo({ top: contactPosition, behavior: "smooth" });
         }
 
         // Chiudi il menu mobile se è aperto
