@@ -305,7 +305,7 @@ dt {
 }
 
 .privacy-content {
-    color: rgb(110, 164, 202);
+    color: rgb(53, 121, 170);;
     padding-top: 20px;
 }
 
@@ -315,9 +315,9 @@ dt {
 }
 
 .su-di-noi {
-    color: rgb(110, 164, 202)
+    color: rgb(53, 121, 170);
 }
-.su-di-noi h1, h2{
+.su-di-noi h1, .su-di-noi h2{
     text-align: center;
     margin-bottom: 20px;
 }
