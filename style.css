@@ -207,6 +207,7 @@ Se la navbar è più alta di 78px, adatta di conseguenza. */
     padding: 40px 20px;
     border-top: 1px solid #ddd;
     color:#ffffff;
+    font-size: 22px;
 }
 
 .contact-info{
@@ -225,7 +226,7 @@ Se la navbar è più alta di 78px, adatta di conseguenza. */
 }
 
 .azzurrino{
-  color:  rgb(30, 171, 199);
+  color:  rgb(30, 171, 199) !important;
 }
 
 .contact-us-title {
