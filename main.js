@@ -106,3 +106,8 @@ document.getElementById('get-directions').addEventListener('click', function () 
     window.open(`https://www.google.com/maps?q=${latitude},${longitude}(${address})`, '_blank');
   }
 });
+
+document.getElementById('year').textContent = new Date().getFullYear();
+
+var _iub = _iub || [];
+_iub.csConfiguration = {"siteId":3902973,"cookiePolicyId":33516255,"lang":"it","storage":{"useSiteId":true}};
