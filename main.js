@@ -18,7 +18,7 @@ if (mobileMenu) {
 // Gestione dei link e della navigazione tra sezioni
 document.addEventListener("DOMContentLoaded", function () {
   const links = document.querySelectorAll(
-    "nav a[data-target], button[data-target]"
+    "a[data-target], button[data-target]"
   );
   const allMains = document.querySelectorAll("main");
   const collapseElement = document.getElementById("navbarMobileMenu");
@@ -90,38 +90,51 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.getElementById('get-directions').addEventListener('click', function () {
-  const latitude = 45.768572151575086;
-  const longitude = 11.759129441706733;
-  const address = encodeURIComponent("Agenzia Bassanese, Viale San Giuseppe 112, 36022 Cassola VI, Italia");
+document
+  .getElementById("get-directions")
+  .addEventListener("click", function () {
+    const latitude = 45.768572151575086;
+    const longitude = 11.759129441706733;
+    const address = encodeURIComponent(
+      "Agenzia Bassanese, Viale San Giuseppe 112, 36022 Cassola VI, Italia"
+    );
 
-  if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
-    // iOS - Usa Apple Maps
-    window.location.href = `http://maps.apple.com/?ll=${latitude},${longitude}&q=${address}`;
-  } else if (navigator.userAgent.match(/Android/i)) {
-    // Android - Usa Google Maps
-    window.location.href = `geo:${latitude},${longitude}?q=${address}`;
-  } else {
-    // Fallback per browser desktop o non riconosciuti
-    window.open(`https://www.google.com/maps?q=${latitude},${longitude}(${address})`, '_blank');
-  }
-});
+    if (navigator.userAgent.match(/iPhone|iPad|iPod/i)) {
+      // iOS - Usa Apple Maps
+      window.location.href = `http://maps.apple.com/?ll=${latitude},${longitude}&q=${address}`;
+    } else if (navigator.userAgent.match(/Android/i)) {
+      // Android - Usa Google Maps
+      window.location.href = `geo:${latitude},${longitude}?q=${address}`;
+    } else {
+      // Fallback per browser desktop o non riconosciuti
+      window.open(
+        `https://www.google.com/maps?q=${latitude},${longitude}(${address})`,
+        "_blank"
+      );
+    }
+  });
 
-document.getElementById('year').textContent = new Date().getFullYear();
+document.getElementById("year").textContent = new Date().getFullYear();
 
 var _iub = _iub || [];
-_iub.csConfiguration = {"siteId":3902973,"cookiePolicyId":33516255,"lang":"it","storage":{"useSiteId":true}};
+_iub.csConfiguration = {
+  siteId: 3902973,
+  cookiePolicyId: 33516255,
+  lang: "it",
+  storage: { useSiteId: true },
+};
 (function (w, d) {
-    var loader = function () {
-      var s = d.createElement("script"), tag = d.getElementsByTagName("script")[0];
-      s.src = "https://cdn.iubenda.com/iubenda.js"; 
-      tag.parentNode.insertBefore(s, tag);
-    };
-    if (w.addEventListener) {
-      w.addEventListener("load", loader, false);
-    } else if (w.attachEvent) {
-      w.attachEvent("onload", loader);
-    } else {
-      w.onload = loader;
-    }
-  })(window, document);
+  var loader = function () {
+    var s = d.createElement("script"),
+      tag = d.getElementsByTagName("script")[0];
+    s.src = "https://cdn.iubenda.com/iubenda.js";
+    tag.parentNode.insertBefore(s, tag);
+  };
+  if (w.addEventListener) {
+    w.addEventListener("load", loader, false);
+  } else if (w.attachEvent) {
+    w.attachEvent("onload", loader);
+  } else {
+    w.onload = loader;
+  }
+})(window, document);

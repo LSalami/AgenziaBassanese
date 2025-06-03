@@ -195,6 +195,17 @@ Se la navbar è più alta di 78px, adatta di conseguenza. */
     /* Dimensione font per la seconda riga */
 }
 
+.owny-section a {
+    color: #1eabc7;
+    text-decoration: underline;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.owny-section a:hover {
+    color: #005580;
+}
+
 @media (min-width: 768px) {
     .services-secondline {
         font-size: 55px;
