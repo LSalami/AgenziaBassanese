@@ -54,14 +54,18 @@
       padding: 20px;
       margin-bottom: 20px;
       transition: all 0.3s ease;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
     }
 
     .audio-item:hover {
       transform: translateY(-5px);
       box-shadow: 0 10px 25px rgba(139, 0, 0, 0.2);
+    }
+
+    .audio-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 15px;
     }
 
     .audio-info {
@@ -101,21 +105,83 @@
       background: linear-gradient(135deg, #8B0000 0%, #5C0000 100%);
       border: none;
       color: white;
-      padding: 12px 20px;
+      padding: 10px 18px;
       border-radius: 25px;
       font-weight: 600;
       text-decoration: none;
       transition: all 0.3s ease;
       display: inline-flex;
       align-items: center;
-      gap: 12px;
+      gap: 8px;
       white-space: nowrap;
+      font-size: 0.95rem;
     }
 
     .download-btn:hover {
       transform: scale(1.05);
       box-shadow: 0 5px 15px rgba(139, 0, 0, 0.4);
       color: white;
+    }
+
+    .audio-player {
+      width: 100%;
+      margin-top: 10px;
+      outline: none;
+    }
+
+    .audio-player::-webkit-media-controls-panel {
+      background: linear-gradient(135deg, #8B0000 0%, #5C0000 100%);
+    }
+
+    .audio-player::-webkit-media-controls-play-button,
+    .audio-player::-webkit-media-controls-mute-button {
+      filter: invert(1);
+    }
+
+    .audio-player::-webkit-media-controls-current-time-display,
+    .audio-player::-webkit-media-controls-time-remaining-display {
+      color: white;
+    }
+
+    .audio-controls {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .speed-control {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+      color: #333;
+    }
+
+    .speed-control label {
+      font-weight: 600;
+      color: #8B0000;
+      margin: 0;
+    }
+
+    .speed-select {
+      padding: 5px 10px;
+      border: 2px solid #8B0000;
+      border-radius: 8px;
+      background: white;
+      color: #8B0000;
+      font-weight: 600;
+      cursor: pointer;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+
+    .speed-select:hover {
+      background: #ffe6e6;
+    }
+
+    .speed-select:focus {
+      box-shadow: 0 0 0 3px rgba(139, 0, 0, 0.1);
     }
 
     .no-files {
@@ -157,14 +223,14 @@
         font-size: 2rem;
       }
 
-      .audio-item {
+      .audio-header {
         flex-direction: column;
         gap: 15px;
+        align-items: flex-start;
       }
 
       .audio-info {
         width: 100%;
-        justify-content: center;
       }
 
       .download-btn {
@@ -180,7 +246,7 @@
     <h1 class="page-title">
       <i class="fas fa-music me-2"></i>File Audio
     </h1>
-    <p class="page-subtitle">Download dei file audio disponibili</p>
+    <p class="page-subtitle">Ascolta e scarica i file audio disponibili</p>
 
     <div id="audio-list">
       <!-- I file audio verranno caricati dinamicamente -->
@@ -219,21 +285,41 @@
           return;
         }
 
-        audioList.innerHTML = audioFiles.map(file => `
+        audioList.innerHTML = audioFiles.map((file, index) => `
           <div class="audio-item">
-            <div class="audio-info">
-              <div class="audio-icon">
-                <i class="fas fa-file-audio"></i>
+            <div class="audio-header">
+              <div class="audio-info">
+                <div class="audio-icon">
+                  <i class="fas fa-file-audio"></i>
+                </div>
+                <div>
+                  <p class="audio-name">${file.name}</p>
+                  <p class="audio-size">${file.size}</p>
+                </div>
               </div>
-              <div>
-                <p class="audio-name">${file.name}</p>
-                <p class="audio-size">${file.size}</p>
+              <a href="media/${file.name}" class="download-btn" download>
+                <i class="fas fa-download"></i>
+                Download
+              </a>
+            </div>
+            <audio controls class="audio-player" id="audio-${index}" preload="metadata">
+              <source src="media/${file.name}" type="audio/mpeg">
+              Il tuo browser non supporta l'elemento audio.
+            </audio>
+            <div class="audio-controls">
+              <div class="speed-control">
+                <label for="speed-${index}"><i class="fas fa-gauge-high"></i> Velocità:</label>
+                <select id="speed-${index}" class="speed-select" onchange="changeSpeed(${index}, this.value)">
+                  <option value="0.5">0.5x</option>
+                  <option value="0.75">0.75x</option>
+                  <option value="1" selected>1x (Normale)</option>
+                  <option value="1.25">1.25x</option>
+                  <option value="1.5">1.5x</option>
+                  <option value="1.75">1.75x</option>
+                  <option value="2">2x</option>
+                </select>
               </div>
             </div>
-            <a href="media/${file.name}" class="download-btn" download>
-              <i class="fas fa-download"></i>
-              Download
-            </a>
           </div>
         `).join('');
       } catch (error) {
@@ -245,6 +331,14 @@
           </div>
         `;
         console.error('Errore:', error);
+      }
+    }
+
+    // Funzione per cambiare la velocità di riproduzione
+    function changeSpeed(audioIndex, speed) {
+      const audio = document.getElementById(`audio-${audioIndex}`);
+      if (audio) {
+        audio.playbackRate = parseFloat(speed);
       }
     }
 
